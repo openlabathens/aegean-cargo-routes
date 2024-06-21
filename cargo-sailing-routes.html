@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Aegean Cargo Sailing Sustainable Routes</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="flex-container">
-        <div class="header">
-            πράσινες διαδρομές
-            <div class="subheader">
-                εργαλείο χάραξης βιώσιμων πράσινων διαδρομών
-            </div>
+      <div class="header">
+        πράσινες διαδρομές
+        <div class="subheader">
+          εργαλείο χάραξης βιώσιμων θαλάσσιων διαδρομών
         </div>
+      </div>
+      <div class="left-container">
+        <p>διάλεξε το λιμάνι έναρξης και το λιμάνι προορισμού</p>
+        <div class="from-select-container">
+        <div class="dot-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20.088"
+            height="20.088"
+            viewBox="0 0 20.088 20.088"
+          >
+            <circle cx="10.044" cy="10.044" r="10.044" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="19.99"
+            height="18"
+            viewBox="0 0 19.99 18"
+          >
+            <polygon
+              points="10.029 5 0 5 0 12.967 10.029 12.967 10.029 18 19.99 8.952 10.029 0 10.029 5"
+            />
+          </svg>
+        </div>
+        <div class="from-select">
+        <label for="ports">ΑΠΟ:</label>
+        <select name="ports" id="ports">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
     </div>
-</body>
+    <div class="to-select-container">
+        <div class="dot-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19.99"
+              height="18"
+              viewBox="0 0 19.99 18"
+            >
+              <polygon
+                points="10.029 5 0 5 0 12.967 10.029 12.967 10.029 18 19.99 8.952 10.029 0 10.029 5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20.088"
+              height="20.088"
+              viewBox="0 0 20.088 20.088"
+            >
+              <circle cx="10.044" cy="10.044" r="10.044" />
+            </svg>
+          </div>
+          <div class="from-select">
+          <label for="ports">ΠΡΟΣ:</label>
+          <select name="ports" id="ports">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+    </div>
+      </div>
+      <div class="middle-container"></div>
+      <div class="right-container"></div>
+      <div class="main-btn-container"></div>
+      <div class="bottom-container"></div>
+    </div>
+  </body>
 </html>

@@ -5,20 +5,59 @@
     /* align-items: stretch; */
     padding: 10%;
     background-color: rgb(207, 196, 192);
+    border: 1px solid black;
   }
 
   .header {
+    border: 1px solid black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    font-size: larger;
+    font-size: 52px;
     color: white;
     align-self: center;
     width: 100%;
   }
 
   .subheader {
+    border: 1px solid black;
     align-self: baseline;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    font-size: small;
+    font-size: 36px;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: rgb(148, 131, 123);
+  }
+
+  .left-container {
+    border: 1px solid black;
+  }
+
+  .dot-arrow {
+    display: inline-block;
+  }
+
+  .from-select {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(148, 131, 123);
+  }
+
+  .middle-container {
+    border: 1px solid black;
+  }
+
+  .right-container {
+    border: 1px solid black;
+  }
+
+  .main-btn-container {
+    border: 1px solid black;
+  }
+
+  .bottom-container {
+    border: 1px solid black;
   }
