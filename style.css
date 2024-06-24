@@ -1,7 +1,7 @@
 .flex-container {
   /* We first create a flex layout context */
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   /* align-items: stretch; */
   padding: 10%;
   background-color: rgb(207, 196, 192);
@@ -30,7 +30,7 @@
 .main-content-one {
   display: flex;
   /* flex-direction: row; */
-  /* justify-content: center; */
+  justify-content: space-around;
   /* align-items: stretch; */
 }
 
@@ -60,28 +60,50 @@ p {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  height: 100vh;  
+  position: relative;
+  height: 100vh;
 }
 
 .btn-map {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin: 10px 0; /* Adjust spacing between buttons */
+  padding: 10px;
 }
 
 .btn-port {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin: 10px 0; /* Adjust spacing between buttons */
+  padding: 10px;
 }
+
+.vertical-dash {
+  border-left: 2px dashed #000; /* Dashed line styling */
+  height: 100%; /* Full height of the container */
+  position: absolute;
+  right: 0; /* Position it on the right side */
+  top: 0; /* Align to the top */
+  margin: 10px 0;
+}
+
 .right-container {
   border: 1px solid black;
 }
 
 .main-btn-container {
+  /* position:relative; */
+  display: flex;
+  justify-content: flex-end;
   border: 1px solid black;
+}
+.main-btn-container button {
+  position: right;
+  /* border: 1px solid black; */
 }
 
 .bottom-container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-bottom: 3px dashed #000; /* Dashed line styling */
+  margin-top: 20px; /* Space above the dashed line */
 }
