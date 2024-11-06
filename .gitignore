@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/css
 
 # Runtime data
 pids
@@ -89,3 +90,6 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Project specific
+.vscode/

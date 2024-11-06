@@ -1,0 +1,10 @@
+.btn-map, .btn-port {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .main-btn-container button {
+    position: right;
+  }

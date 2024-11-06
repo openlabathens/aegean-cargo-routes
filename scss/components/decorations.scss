@@ -1,0 +1,12 @@
+.dot-arrow {
+    display: inline-block;
+  }
+  
+  .vertical-dash {
+    border-left: 2px dashed $border-color;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px 0;
+  }
