@@ -1,24 +1,25 @@
 .title {
-    border: 1px solid $border-color;
-    font-family: $font-family-title;
-    font-weight: bold;
-    font-size: 52px;
-    color: white;
-    align-self: center;
-    width: 100%;
-  }
-  
-  .subtitle {
-    border: 1px solid $border-color;
-    align-self: baseline;
-    font-family: $font-family-body;
-    font-weight: lighter;
-    font-size: 36px;
-  }
-  
-  p, .from-select {
-    font-family: $font-family-body;
-    font-weight: lighter;
-    font-size: 12px;
-    color: $text-color;
-  }
+  border: 1px solid $border-color;
+  font-family: $font-family-title;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: white;
+  align-self: center;
+  width: 100%;
+}
+
+.subtitle {
+  border: 1px solid $border-color;
+  align-self: baseline;
+  font-family: $font-family-body;
+  font-weight: lighter;
+  font-size: 2.3rem;
+  color: white;
+}
+
+// p, .from-select {
+//   font-family: $font-family-body;
+//   font-weight: lighter;
+//   font-size: 12px;
+//   color: $text-color;
+// }

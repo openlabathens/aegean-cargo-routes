@@ -1,32 +1,8 @@
-.flex-container {
-    padding: 10%;
-    background-color: $primary-bg-color;
-    border: 1px solid $border-color;
-  }
-  
-  .main-content-one {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .left-container, .middle-container, .right-container {
-    border: 1px solid $border-color;
-  }
-  
-  .middle-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-  }
-  
-  .main-btn-container {
-    display: flex;
-    justify-content: flex-end;
-    border: 1px solid $border-color;
-  }
-  
-  .bottom-container {
-    border-bottom: 3px dashed $border-color;
-    margin-top: 20px;
-  }
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: $primary-bg-color;
+}
