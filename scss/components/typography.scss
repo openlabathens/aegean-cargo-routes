@@ -1,5 +1,4 @@
 .title {
-  border: 1px solid $border-color;
   font-family: $font-family-title;
   font-weight: bold;
   font-size: 2.5rem;
@@ -9,17 +8,15 @@
 }
 
 .subtitle {
-  border: 1px solid $border-color;
   align-self: baseline;
-  font-family: $font-family-body;
+  font-family: $font-family-title;
   font-weight: lighter;
   font-size: 2.3rem;
   color: white;
 }
 
-// p, .from-select {
-//   font-family: $font-family-body;
-//   font-weight: lighter;
-//   font-size: 12px;
-//   color: $text-color;
-// }
+.section-left, .section-right {
+  font-family: $font-family-body;
+  font-size: 0.8rem;
+  color: $text-color;
+}

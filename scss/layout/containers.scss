@@ -6,3 +6,28 @@
   padding: 20px;
   background-color: $primary-bg-color;
 }
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 10%;
+}
+
+.section-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.section-left, .section-right {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+.section-divider {
+  border-left: 2px dashed #000;
+  margin: 0 20px;
+  height: auto;
+}
