@@ -40,10 +40,19 @@
               <p class="svg-label">wind speed (kt)</p>
             </div>
           </div>
-          <button class="calculate-button">CALCULATE</button>
+          <button class="calculate-button" onclick="showResultsPage()">CALCULATE</button>
         </div>
       </div>
     </div>
+
+    <!-- Hidden Content -->
+    <div class="results-page" id="resultsPage">
+      <h2>Additional Information</h2>
+      <p>This is the additional content displayed after clicking the Calculate button.</p>
+      <p>Here you can show results or further information related to the route and weather conditions.</p>
+    </div>
+
     <script src="js/carousel.js"></script>
+    <script src="js/calculate.js"></script>
   </body>
 </html>
