@@ -15,8 +15,13 @@
   color: white;
 }
 
-.section-left, .section-right, .svg-label {
+.section-left-label, .section-right-label, .svg-label {
   font-family: $font-family-body;
   font-size: 0.8rem;
   color: $text-color;
+}
+
+.section-right-label {
+  text-align: left;
+  width: 100%;
 }

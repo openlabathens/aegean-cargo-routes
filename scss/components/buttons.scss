@@ -1,11 +1,17 @@
-.btn-map,
-.btn-port {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  margin: 10px 0;
-  padding: 10px;
+.calculate-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: $calc-btn-font-size; /* Button font size */
+  background-color: $calc-btn-color; /* Button background color */
+  color: $calc-btn-text-color; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 100px; /* Rounded corners */
+  cursor: pointer;
+  // text-align: center;
+  // display: inline-block;
+  width: 150px;
 }
 
-.main-btn-container button {
-  position: right;
+.calculate-button:hover {
+  background-color: $calc-btn-hover-color;
 }
