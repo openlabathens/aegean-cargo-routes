@@ -9,9 +9,17 @@
   "scripts": {
     "prepare": "husky"
   },
-    "lint-staged": {
-      "*.html": ["prettier --write"],
-      "*.js": ["eslint --fix", "prettier --write"],
-      "*.scss": ["stylelint --fix", "prettier --write"]
-    }
+  "lint-staged": {
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  }
 }
