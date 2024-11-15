@@ -26,7 +26,7 @@
 .section-left,
 .section-right {
   flex: 1;
-  border: 1px solid #000;
+  border: $border-color;
   display: flex;
   flex-direction: column;
   align-items: center;

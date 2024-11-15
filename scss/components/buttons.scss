@@ -5,10 +5,8 @@
   background-color: $calc-btn-color; /* Button background color */
   color: $calc-btn-text-color; /* Button text color */
   border: none; /* Remove default border */
-  border-radius: 100px; /* Rounded corners */
+  border-radius: $border-radius;
   cursor: pointer;
-  // text-align: center;
-  // display: inline-block;
   width: 150px;
 }
 
