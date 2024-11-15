@@ -1,41 +1,30 @@
-.section-left {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .carousel {
-    margin-top: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 150px; /* Adjust to fit 3 items at a time */
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory; /* Enables snap scrolling */
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .carousel-item {
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: #e0e0e0;
-    border-radius: 3px;
-    text-align: center;
-    cursor: pointer;
-    scroll-snap-align: center; /* Centers each item in the view */
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .carousel-item.active {
-    background-color: #a8d5e2;
-    color: #fff;
-    font-weight: bold;
-    transform: scale(1.1); /* Enlarge the active item slightly */
-  }
-  
-  .carousel-item:not(.active) {
-    opacity: 0.6; /* Dim non-active items */
-  }
+.island-svg-container {
+  position: absolute;
+  overflow-y: scroll;
+  height: 50%;
+  width: 25%;
+  margin-top: 75px;
+}
+
+.island-svg {
+  margin-top: 30px;
+  display: block;
+}
+
+.highlight-frame {
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  height: 100px;
+  border: 2px solid blue;
+}
+
+.island-highlight {
+  fill: yellow;
+  transition: fill 0.3s ease;
+}
+
+.spacer {
+  height: 35px; /* Adjust this to control the extra space */
+  width: 100%;
+}

@@ -14,12 +14,12 @@
 .svg-icons {
   display: flex;
   flex-direction: row;
-  gap: 10px; 
+  gap: 10px;
   margin-top: 20px;
 }
 
 .svg-icon {
-  width: 75%; 
+  width: 75%;
   height: auto;
 }
 
@@ -28,4 +28,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 75px;
+  margin-bottom: 25px;
 }

@@ -18,27 +18,23 @@
   display: flex;
   align-items: stretch;
   width: 100%;
+  flex: 1;
 }
 
-.section-left, .section-right {
+.section-left,
+.section-right {
   flex: 1;
   border: 1px solid #000;
-  padding: 20px;
-  box-sizing: border-box; /* Ensures padding doesn’t expand section width */
   display: flex;
   flex-direction: column;
-}
-
-.section-right {
   align-items: center;
 }
 
 .section-divider {
   border-left: 2px dashed #000;
-  margin: 0 10px; 
+  margin: 0 10px;
   height: auto;
 }
-
 
 .results-page {
   display: none; /* Initially hidden */
