@@ -5,6 +5,8 @@
   justify-content: center;
   padding: 20px;
   background-color: $primary-bg-color;
+
+  /* overflow: hidden; /* Prevent unnecessary scrollbars */
 }
 
 .content-container {
@@ -39,6 +41,5 @@
 .results-page {
   display: none; /* Initially hidden */
   padding: 20px;
-  border-top: 1px solid #ccc;
-  margin-top: 20px;
+  background-color: $primary-bg-color;
 }
