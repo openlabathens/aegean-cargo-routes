@@ -42,4 +42,7 @@
   display: none; /* Initially hidden */
   padding: 20px;
   background-color: $primary-bg-color;
+
+  /* Optional: Add transition for smooth display */
+  transition: display 0.3s ease-in-out;
 }
