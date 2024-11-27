@@ -3,8 +3,15 @@
       {
         "files": "*.scss",
         "options": {
-          "singleQuote": true,
-          "parser": "scss"
+          "parser": "scss",
+          "scss": {
+            "atRuleNoUnknown": [
+              true,
+              {
+                "ignoreAtRules": ["import"]
+              }
+            ]
+          }
         }
       }
     ]
