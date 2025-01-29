@@ -1,32 +1,5 @@
 (function ($) {
 
-  $(document).ready(function() {
-
-    //Wind direction
-    $("#wind-slider-data").roundSlider({
-      disabled:true,
-      min: 0,
-      max: 360,
-      step: 90,
-      value: 90,
-      sliderType: "min-range",
-      radius: 150,
-      showTooltip: false
-    });
-
-    //Wind speed
-    $("#speed-slider-data").roundSlider({
-      disabled:true,
-      min: 0,
-      max: 360,
-      step: 45,
-      value: 150,
-      sliderType: "min-range",
-      radius: 130,
-      showTooltip: false
-    });
-  });
-
   //On DOM ready for the selection menu
   $(document).ready(function () {
 
@@ -65,8 +38,10 @@
         //Store data
         $("#island-departure").val(departure);
         $("#island-destination").val(destination);
-        //Enable button
-        $("#calculate-route").removeClass("disabled");
+        if (destination > 0) {
+          //Enable button
+          $("#calculate-route").removeClass("disabled");
+        }
       }
     );
 
@@ -103,23 +78,56 @@
         //Do nothing
       } else {
 
+        //Get gata
+        var routeNumberning = $("#routes-info-placement").data("numbering");
+
+        var windDirection = $("#wind-slider").roundSlider("option", "value");
+        var windSpeed = $("#speed-slider").roundSlider("option", "value");
+
         //Send data
         $.ajax({
           type: "post",
           url: `${window.location.origin}/wp-admin/admin-ajax.php`,
           data: {
             action: "aegean_sail_show_route_info",
+            numbering: routeNumberning,
             departure: $("#island-departure").val(),
             destination: $("#island-destination").val(),
-            windDirection: $("#wind-slider").roundSlider("option", "value"),
-            windSpeed: $("#speed-slider").roundSlider("option", "value")
+            windDirection: windDirection,
+            windSpeed: windSpeed
           },
           success: function (res) {
+            //Add content
             $("#routes-info-placement").append(res);
             $("#routes-info-placement").show();
+            //Activate round sliders
+            $("#wind-slider-data-" + routeNumberning).roundSlider({
+              disabled: true,
+              min: 0,
+              max: 360,
+              step: 90,
+              value: windDirection,
+              sliderType: "min-range",
+              radius: 150,
+              showTooltip: false
+            });
+            $("#speed-slider-data-" + routeNumberning).roundSlider({
+              disabled: true,
+              min: 0,
+              max: 360,
+              step: 45,
+              value: windSpeed,
+              sliderType: "min-range",
+              radius: 130,
+              showTooltip: false
+            });
+            //Animate to added route
             $('html, body').animate({
-              scrollTop: $("#routes-info-placement").offset().top
+              scrollTop: $("#route-" + routeNumberning).offset().top
             }, 1000);
+            //Update numbering
+            routeNumberning = routeNumberning + 1;
+            $("#routes-info-placement").data("numbering", routeNumberning);
           }
         });
 

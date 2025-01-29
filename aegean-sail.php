@@ -13,10 +13,10 @@
 // Register Post Types
 require_once('registration/register-post-types.php');
 
-//Template to show routes
+//Shortcode to show routes
 require_once('routes-template.php');
 
-//Helpers
+//Include
 require_once('inc/routes-helpers.php');
 require_once('inc/routes-ajax.php');
 
