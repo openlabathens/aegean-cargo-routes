@@ -20,7 +20,7 @@ function routes_map_wind_direction($windDirection){
         '90'=> 'N',
         '180'=> 'E',
         '270'=> 'S',
-        '360'=> 'W'
+        '0'=> 'W'
     );
 
     return $wind_direction_mapping[$windDirection];
@@ -35,7 +35,7 @@ function routes_map_wind_speed($windSpeed){
         '225'=> '10_20',
         '270'=> '10_20',
         '315'=> '10_20',
-        '360'=> '20_30',
+        '0'=> '20_30',
         '45'=> '20_30',
     );
 
