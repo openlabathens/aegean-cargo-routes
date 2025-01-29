@@ -2,6 +2,10 @@
 
 This is a WordPress Plugin for the Aegean Cargo Sailing [website](https://aegeancargosailing.org/). It displays data for selected routes between islands of the Aegean Sea. It presents the routes traveling time with Solar and Wind power, and with fossil fuel engine.
 
+## Requirments
+
+[ACF Pro](https://www.advancedcustomfields.com/pro/) is needed.
+
 ## Instalation
 
 The plugin can be used as it is. You download from this repository and install in your WordPress website as any other plugin. 
@@ -10,7 +14,7 @@ You can use it to display your own data. Islands and Routes are added as Post Ty
 
 ## Data (To be updated)
 
-Data are provided in a CSV format for further usage, but are displayed here
+Data are provided in a CSV format for further usage, but are also displayed here.
 
 ## Credits
 

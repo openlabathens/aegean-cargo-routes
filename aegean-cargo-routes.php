@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Aegean Sail
- * Description: Add Custom Functionality
+ * Plugin Name: Aegean Cargo Routes
+ * Description: Displays data for selected routes between islands of the Aegean Sea. It presents the routes traveling time with Solar and Wind power, and with fossil fuel engine.
  * Version: 1.0
  * Author: Open Lab Athens
  * Author URI: https://olathens.gr/
