@@ -10,11 +10,15 @@ This is a WordPress Plugin for the Aegean Cargo Sailing [website](https://aegean
 
 The plugin can be used as it is. You download from this repository and install in your WordPress website as any other plugin. 
 
-You can use it to display your own data. Islands and Routes are added as Post Types in your WP CMS and can be managed accordingly.
+## Usage
+
+You can than use the shortode `aegean_sail_routes` to display the routes interface anywhere in your website.
+
+You can use the plugin to display your own routes. Islands and Routes are added as Post Types in your WP CMS and can be managed there accordingly.
 
 ## Data (To be updated)
 
-Data are provided in a CSV format for further usage, but are also displayed here.
+Data are provided in a CSV format for further usage, but are also displayed here. 
 
 ## Credits
 
