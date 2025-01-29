@@ -1,0 +1,50 @@
+.route-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: $primary-bg-color;
+
+  .island {
+    display: flex;
+    align-items: center;
+
+    .island-icon {
+      width: auto;
+      height: 3rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .direction {
+    display: flex;
+    align-items: center;
+
+    .direction-text {
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+      color: #666;
+    }
+
+    .arrow-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .loop {
+    display: flex;
+    align-items: center;
+
+    .loop-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .loop-text {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}
