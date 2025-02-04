@@ -62,6 +62,7 @@ function show_route_info_template()
                         <h3 class="dest" style="background-image: url('<?php echo get_the_post_thumbnail_url($destination_island->ID, 'full'); ?>');">
                             <?php echo $destination_island->post_title; ?>
                         </h3>
+                        <?php routes_reverse_route($numbering,$destination_island->ID,$departure_island->ID,$windDirection,$windSpeed); ?>
                     </div>
                 </div>
 
@@ -229,8 +230,6 @@ function show_route_info_template()
 <?php
         endwhile;
         wp_reset_postdata();
-    else:
-        echo "fail";
     endif;
     wp_die();
 } ?>
