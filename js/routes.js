@@ -125,9 +125,13 @@
             $('html, body').animate({
               scrollTop: $("#route-" + routeNumberning).offset().top
             }, 1000);
+            //Add route handler
+            $("#reverse-button-" + routeNumberning).click(function () {
+              loadReverseRoute(routeNumberning);
+            });
             //Update numbering
-            routeNumberning = routeNumberning + 1;
-            $("#routes-info-placement").data("numbering", routeNumberning);
+            newRouteNumberning = routeNumberning + 1;
+            $("#routes-info-placement").data("numbering", newRouteNumberning);
           }
         });
 
@@ -136,5 +140,59 @@
     });
 
   });
+
+  //Load the reverse route when asked
+  function loadReverseRoute(rNumbering) {
+
+    var rDeparture = $("#reverse-route-data-" + rNumbering).data("departure");
+    var rDestination = $("#reverse-route-data-" + rNumbering).data("destination");
+    var rWindDirection = $("#reverse-route-data-" + rNumbering).data("winddirection");
+    var rWindSpeed = $("#reverse-route-data-" + rNumbering).data("windspeed");
+
+    //Send data
+    $.ajax({
+      type: "post",
+      url: `${window.location.origin}/wp-admin/admin-ajax.php`,
+      data: {
+        action: "aegean_sail_show_route_info",
+        numbering: rNumbering,
+        departure: rDeparture,
+        destination: rDestination,
+        windDirection: rWindDirection,
+        windSpeed: rWindSpeed
+      },
+      success: function (res) {
+        //Add content
+        $("#route-" + rNumbering).replaceWith(res);
+        //Activate round sliders
+        $("#wind-slider-data-" + rNumbering).roundSlider({
+          disabled: true,
+          min: 0,
+          max: 360,
+          step: 90,
+          value: rWindDirection,
+          sliderType: "min-range",
+          radius: 150,
+          showTooltip: false
+        });
+        $("#speed-slider-data-" + rNumbering).roundSlider({
+          disabled: true,
+          min: 0,
+          max: 360,
+          step: 45,
+          value: rWindSpeed,
+          sliderType: "min-range",
+          radius: 130,
+          showTooltip: false
+        });
+         //Add route handler
+         $("#reverse-button-" + rNumbering).click(function () {
+          loadReverseRoute(rNumbering);
+        });
+      }
+    });
+
+  }
+
 
 })(jQuery);
