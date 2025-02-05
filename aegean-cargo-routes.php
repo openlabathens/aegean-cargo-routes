@@ -10,8 +10,9 @@
  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
  **/
 
-// Register Post Types
+// Register Post Types & Meta
 require_once('registration/register-post-types.php');
+require_once('registration/register-post-meta.php');
 
 //Shortcode to show routes
 require_once('routes-template.php');
