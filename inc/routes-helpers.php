@@ -4,12 +4,19 @@ function routes_map_direction($direction)
 {
 
     $direction_mapping = array(
-        'SE' => __('SouthEast', 'aegean-sail'),
         'S' => __('South', 'aegean-sail'),
-        'SSE' => __('SouthSouthEast', 'aegean-sail'),
+        'SE' => __('South East', 'aegean-sail'),
+        'SSE' => __('South South East', 'aegean-sail'),
+        'SW' => __('South West', 'aegean-sail'),
         'N' => __('North', 'aegean-sail'),
+        'NE' => __('North East', 'aegean-sail'),
+        'NW' => __('North West', 'aegean-sail'),
+        'NNW' => __('North North West', 'aegean-sail'),
         'E' => __('East', 'aegean-sail'),
+        'ESE' => __('East South East', 'aegean-sail'),
+        'ENE' => __('East North East', 'aegean-sail'),
         'W' => __('West', 'aegean-sail'),
+        'WSW' => __('West South West', 'aegean-sail'),
     );
 
     return $direction_mapping[$direction];
