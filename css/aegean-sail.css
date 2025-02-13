@@ -1,5 +1,5 @@
 .green-routes {
-  font-family: "Geologica", sans-serif;
+  font-family: "Geologica", sans-serif !important;
   max-width: 100%;
   background: rgb(207, 196, 192);
   padding-bottom: 50px;
@@ -291,6 +291,7 @@
   line-height: inherit;
 }
 .routes-info .route-data-time .row span {
+  color: #000;
   font-size: 30px;
   text-align: center;
   font-weight: bold;
@@ -345,6 +346,7 @@
 }
 .routes-info .route-table-data-winds .route-table .table-content label,
 .routes-info .route-table-data-winds .route-table .table-content span {
+  color: #000;
   font-weight: bold;
   font-size: 19px;
   display: block;
