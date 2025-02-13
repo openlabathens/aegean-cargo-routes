@@ -48,8 +48,8 @@ function show_route_info_template()
                         'time_electricity' => $sub_time_electricity
                     );
                 endwhile;
-            endif; 
-            ?>           
+            endif;
+?>
             <div id="route-<?php echo $numbering; ?>" class="route route-<?php echo get_the_ID(); ?>">
                 <div class="row route-title">
                     <div class="col-md-12 route-islands">
@@ -62,7 +62,7 @@ function show_route_info_template()
                         <h3 class="dest" style="background-image: url('<?php echo get_the_post_thumbnail_url($destination_island->ID, 'full'); ?>');">
                             <?php echo $destination_island->post_title; ?>
                         </h3>
-                        <?php routes_reverse_route($numbering,$destination_island->ID,$departure_island->ID,$windDirection,$windSpeed); ?>
+                        <?php routes_reverse_route($numbering, $destination_island->ID, $departure_island->ID, $windDirection, $windSpeed); ?>
                     </div>
                 </div>
 
@@ -72,11 +72,11 @@ function show_route_info_template()
                         <div class="row">
                             <div class="col-md-6">
                                 <h5><?php _e('wind direction', 'aegean-sail'); ?></h5>
-                                <div id="wind-slider-data-<?php echo $numbering ; ?>" class="weather-slider wind-slider"></div>
+                                <div id="wind-slider-data-<?php echo $numbering; ?>" class="weather-slider wind-slider"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5><?php _e('wind speed (kt)', 'aegean-sail'); ?></h5>
-                                <div id="speed-slider-data-<?php echo $numbering ; ?>" class="weather-slider speed-slider"></div>
+                                <div id="speed-slider-data-<?php echo $numbering; ?>" class="weather-slider speed-slider"></div>
                             </div>
                         </div>
                     </div>
@@ -196,13 +196,15 @@ function show_route_info_template()
                         </div>
                     </div>
                     <div class="col-lg-5 route-table-data-instrcutions">
-                        <h5><?php _e('Practical informations on the trip', 'aegean-sail'); ?></h5>
-                        <div class="route-table-data-instrcutions-content">
-                            <?php the_content(); ?>
-                        </div>
+                        <?php if (get_the_content()) : ?>
+                            <h5><?php _e('Practical informations on the trip', 'aegean-sail'); ?></h5>
+                            <div class="route-table-data-instrcutions-content">
+                                <?php the_content(); ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
-
+                <?php if($departure_island->post_content||$destination_island->post_content): ?>
                 <div class="row route-islands-products">
                     <h4 class="section-devide"><?php _e('Products transfered by Aegean Cargo Sailing', 'aegean-sail'); ?></h4>
                     <div class="col-lg-8 offset-lg-2">
@@ -226,6 +228,7 @@ function show_route_info_template()
                         </div>
                     </div>
                 </div>
+                <?php endif ; ?>
             </div>
 <?php
         endwhile;
