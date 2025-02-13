@@ -1,0 +1,451 @@
+.green-routes {
+  font-family: "Geologica", sans-serif;
+  max-width: 100%;
+  background: rgb(207, 196, 192);
+  padding-bottom: 50px;
+}
+.green-routes .routes-title {
+  padding: 50px;
+  margin-bottom: 40px;
+}
+.green-routes .routes-title h1 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 55px;
+}
+.green-routes .routes-title h2 {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.weather-slider {
+  margin: auto;
+  margin-bottom: 70px;
+}
+.weather-slider .rs-range-color,
+.weather-slider .rs-path-color,
+.weather-slider .rs-bg-color {
+  background: none;
+}
+.weather-slider .rs-border {
+  border: 0px;
+}
+
+.wind-slider {
+  background-image: url("../assets/compass.png");
+  background-size: cover;
+}
+.wind-slider .rs-handle {
+  background-image: url("../assets/compass-arrow.png");
+  background-color: transparent !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin: -21px -36px 0px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+
+.speed-slider {
+  background-image: url("../assets/windspeed.png");
+  background-size: cover;
+}
+.speed-slider .rs-handle {
+  background-image: url("../assets/speed-arrow.png");
+  background-color: transparent !important;
+  width: 93px !important;
+  height: 299px !important;
+  margin: -182px 77px 0px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+
+.routes-menu h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(148, 131, 123);
+  align-self: flex-start;
+  margin-left: 40px;
+  margin-bottom: 70px;
+}
+.routes-menu h5 {
+  color: rgb(148, 131, 123);
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.routes-menu-right {
+  border-left: 2px dashed #000;
+}
+@media screen and (max-width: 992px) {
+  .routes-menu-right {
+    border-left: 0px;
+    border-top: 2px dashed #000;
+    margin-top: 20px !important;
+    padding-top: 40px;
+  }
+}
+.routes-menu .island-list {
+  margin-top: 70px;
+  height: 550px;
+  overflow-y: scroll;
+  margin-right: 50px;
+}
+.routes-menu .island-list .island {
+  width: 90%;
+  float: right;
+  padding: 10px 40px 10px 160px;
+  cursor: pointer;
+  height: 90px;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  .routes-menu .island-list .island {
+    padding: 10px 40px 10px 40px;
+  }
+}
+.routes-menu .island-list .island.selected-up, .routes-menu .island-list .island.selected-down, .routes-menu .island-list .island.hovered-up, .routes-menu .island-list .island.hovered-down {
+  background: #4e6e75;
+}
+.routes-menu .island-list .island.hovered-up, .routes-menu .island-list .island.selected-up {
+  border-radius: 80px 80px 0px 0px;
+  border: 3px solid #000;
+  border-bottom: 0px;
+}
+.routes-menu .island-list .island.hovered-down, .routes-menu .island-list .island.selected-down {
+  border-radius: 0px 0px 80px 80px;
+  border: 3px solid #000;
+  border-top: 0px;
+  margin-top: -1px;
+}
+.routes-menu .island-list .island h4 {
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+  margin-left: 60px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 60px;
+}
+.routes-menu .island-list .island-icon {
+  width: 60px;
+  height: 60px;
+  float: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.routes-menu .calculate-button {
+  font-family: "Geologica", sans-serif;
+  padding: 18px 35px 18px 70px;
+  font-size: 22px;
+  background-color: rgb(148, 131, 123);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+.routes-menu .calculate-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+.routes-menu .calculate-button.disabled:hover {
+  background-color: rgb(148, 131, 123);
+}
+.routes-menu .calculate-button:hover {
+  background-color: rgb(118, 104, 98);
+}
+.routes-menu .calculate-button img {
+  position: absolute;
+  width: 40px;
+  left: 13px;
+  top: 14px;
+}
+
+.routes-info {
+  display: none;
+  transition: display 0.3s ease-in-out;
+  margin-bottom: 120px;
+}
+.routes-info h4.section-devide {
+  text-transform: lowercase;
+  border-top: 2px dashed #000;
+  border-bottom: 2px dashed #000;
+  padding: 10px;
+  margin-bottom: 40px !important;
+  text-align: left;
+  font-size: 20px;
+  color: rgb(118, 104, 98);
+}
+.routes-info .route-islands .dep,
+.routes-info .route-islands .direction,
+.routes-info .route-islands .dest {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  padding: 1rem 2rem;
+}
+@media screen and (max-width: 970px) {
+  .routes-info .route-islands .dep,
+  .routes-info .route-islands .direction,
+  .routes-info .route-islands .dest {
+    width: 100%;
+    text-align: center;
+  }
+}
+.routes-info .route-islands .dep,
+.routes-info .route-islands .dest {
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.routes-info .route-islands .dest {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.routes-info .route-islands .direction {
+  background-image: url("../assets/direction-arrow.png");
+}
+@media screen and (max-width: 970px) {
+  .routes-info .route-islands .direction {
+    background-size: 300px;
+  }
+}
+.routes-info .route-title {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.routes-info .route-title h3 {
+  font-size: 53px;
+}
+.routes-info .route-title h4 {
+  font-size: 35px;
+}
+.routes-info .route-title .reverse-button img {
+  cursor: pointer;
+  width: 60px;
+  margin-top: -26px;
+}
+.routes-info .route-data h4 {
+  color: rgb(118, 104, 98);
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px !important;
+  margin-bottom: 30px !important;
+  text-transform: uppercase;
+}
+.routes-info .route-data-winds {
+  position: relative;
+  padding-left: 80px;
+}
+.routes-info .route-data-winds label {
+  color: rgb(118, 104, 98);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  padding-bottom: 12px;
+  border-bottom: 2px dashed #000;
+  position: absolute;
+  top: 144px;
+  left: -50px;
+}
+.routes-info .route-data-winds h5 {
+  color: rgb(148, 131, 123);
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.routes-info .route-data-time {
+  padding: 15px;
+}
+.routes-info .route-data-time .row {
+  margin-bottom: 20px;
+}
+.routes-info .route-data-time .row .icon-holder {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 50px;
+}
+.routes-info .route-data-time .row label {
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: auto;
+  color: #fff;
+  text-transform: lowercase;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 500;
+}
+.routes-info .route-data-time .row label.two-lines {
+  line-height: inherit;
+}
+.routes-info .route-data-time .row span {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.routes-info .route-data .distance {
+  background-image: url("../assets/distance.png");
+}
+.routes-info .route-data .time {
+  background-image: url("../assets/time.png");
+}
+.routes-info .route-data .battery {
+  background-image: url("../assets/battery.png");
+}
+.routes-info .route-data .petrol {
+  background-image: url("../assets/petrol.png");
+}
+.routes-info .route-table-data {
+  padding: 20px;
+}
+.routes-info .route-table-data-winds {
+  overflow-x: scroll;
+}
+.routes-info .route-table-data-winds .route-table {
+  min-width: 670px;
+}
+.routes-info .route-table-data-winds .route-table .table-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.routes-info .route-table-data-winds .route-table .table-title label {
+  color: rgb(118, 104, 98);
+  text-transform: lowercase;
+  font-size: 18px;
+}
+.routes-info .route-table-data-winds .route-table .table-labels {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.routes-info .route-table-data-winds .route-table .table-labels label {
+  color: rgb(118, 104, 98);
+  margin-bottom: 20px;
+}
+.routes-info .route-table-data-winds .route-table .table-labels img {
+  max-width: 32px;
+}
+.routes-info .route-table-data-winds .route-table .table-labels .petrol-icon {
+  align-self: flex-end;
+  padding-bottom: 5px;
+}
+.routes-info .route-table-data-winds .route-table .table-content {
+  text-align: center;
+}
+.routes-info .route-table-data-winds .route-table .table-content label,
+.routes-info .route-table-data-winds .route-table .table-content span {
+  font-weight: bold;
+  font-size: 19px;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.routes-info .route-table-data-winds .route-table .table-content .white-line {
+  border-right: 2px dashed #fff;
+}
+.routes-info .route-table-data-winds .route-table .table-content .wind-speed-0_5 {
+  background-color: #b2a7a3;
+}
+.routes-info .route-table-data-winds .route-table .table-content .wind-speed-6_10 {
+  background-color: #928986;
+}
+.routes-info .route-table-data-winds .route-table .table-content .wind-speed-10_20 {
+  background-color: #857d7a;
+}
+.routes-info .route-table-data-winds .route-table .table-content .wind-speed-20_30 {
+  background-color: #686260;
+}
+.routes-info .route-table-data-instrcutions {
+  padding: 30px;
+}
+.routes-info .route-table-data-instrcutions h5 {
+  text-transform: uppercase;
+  color: rgb(118, 104, 98);
+  text-align: center;
+  margin-bottom: 25px !important;
+}
+.routes-info .route-table-data-instrcutions-content {
+  padding: 12px;
+  border: 2px dashed #fff;
+  color: #fff;
+  background-color: #968179;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.routes-info .route-islands-products {
+  padding: 20px;
+  border-bottom: 2px solid #000;
+}
+.routes-info .route-islands-products h5 {
+  margin: auto;
+  margin-bottom: 15px;
+  display: block !important;
+  text-align: center;
+  font-size: 40px;
+}
+.routes-info .route-islands-products-content {
+  padding: 30px;
+}
+
+/*
+.route-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: $primary-bg-color;
+
+  .island {
+    display: flex;
+    align-items: center;
+
+    .island-icon {
+      width: auto;
+      height: 3rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .direction {
+    display: flex;
+    align-items: center;
+
+    .direction-text {
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+      color: #666;
+    }
+
+    .arrow-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .loop {
+    display: flex;
+    align-items: center;
+
+    .loop-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .loop-text {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}*//*# sourceMappingURL=aegean-sail.css.map */

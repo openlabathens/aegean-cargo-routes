@@ -1,0 +1,336 @@
+.routes-info {
+
+  display: none;
+  transition: display 0.3s ease-in-out;
+  margin-bottom: 120px;
+
+  h4.section-devide {
+    text-transform: lowercase;
+    border-top: 2px dashed #000;
+    border-bottom: 2px dashed #000;
+    padding: 10px;
+    margin-bottom: 40px !important;
+    text-align: left;
+    font-size: 20px;
+    color: $main-color-dark;
+  }
+
+  .route-islands {
+
+    .dep,
+    .direction,
+    .dest {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      padding: 1rem 2rem;
+
+      @media screen and (max-width: 970px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .dep,
+    .dest {
+      color: #fff;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .dest {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .direction {
+      background-image: url('../assets/direction-arrow.png');
+
+      @media screen and (max-width: 970px) {
+        background-size: 300px;
+      }
+    }
+  }
+
+  .route-title {
+    margin-bottom: 40px;
+    padding: 20px;
+
+    h3 {
+      font-size: 53px;
+    }
+
+    h4 {
+      font-size: 35px;
+    }
+
+    .reverse-button {
+      img {
+        cursor: pointer;
+        width: 60px;
+        margin-top: -26px;
+      }
+    }
+  }
+
+  .route-data {
+
+    h4 {
+      color: $main-color-dark;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 40px !important;
+      margin-bottom: 30px !important;
+      text-transform: uppercase;
+    }
+
+    &-winds {
+
+      position: relative;
+      padding-left: 80px;
+
+      label {
+        color: $main-color-dark;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        padding-bottom: 12px;
+        border-bottom: 2px dashed #000;
+        position: absolute;
+        top: 144px;
+        left: -50px;
+      }
+
+      h5 {
+        color: $main-color;
+        font-size: 17px;
+        text-align: center;
+        margin-bottom: 55px;
+      }
+
+    }
+
+    &-time {
+      padding: 15px;
+
+      .row {
+        margin-bottom: 20px;
+
+        .icon-holder {
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          height: 50px;
+        }
+
+        label {
+          text-align: center;
+          width: 50%;
+          display: block;
+          margin: auto;
+          color: #fff;
+          text-transform: lowercase;
+          font-size: 18px;
+          line-height: 50px;
+          font-weight: 500;
+
+          &.two-lines {
+            line-height: inherit;
+          }
+        }
+
+        span {
+          font-size: 30px;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    //Icons
+    .distance {
+      background-image: url('../assets/distance.png');
+    }
+
+    .time {
+      background-image: url('../assets/time.png');
+    }
+
+    .battery {
+      background-image: url('../assets/battery.png')
+    }
+
+    .petrol {
+      background-image: url('../assets/petrol.png')
+    }
+
+  }
+
+  .route-table-data {
+    padding: 20px;
+
+    &-winds {
+      overflow-x: scroll;
+
+      .route-table {
+        min-width: 670px;
+
+        .table-title {
+          text-align: center;
+          margin-bottom: 30px;
+
+          label {
+            color: $main-color-dark;
+            text-transform: lowercase;
+            font-size: 18px;
+          }
+        }
+
+        .table-labels {
+          text-align: center;
+          padding-bottom: 10px;
+
+          label {
+            color: $main-color-dark;
+            margin-bottom: 20px;
+          }
+
+          img {
+            max-width: 32px;
+          }
+
+          .petrol-icon {
+            align-self: flex-end;
+            padding-bottom: 5px;
+          }
+        }
+
+        .table-content {
+          text-align: center;
+
+          label,
+          span {
+            font-weight: bold;
+            font-size: 19px;
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+
+          .white-line {
+            border-right: 2px dashed #fff;
+          }
+
+          .wind-speed-0_5 {
+            background-color: $tb-1;
+          }
+
+          .wind-speed-6_10 {
+            background-color: $tb-2;
+          }
+
+          .wind-speed-10_20 {
+            background-color: $tb-3;
+          }
+
+          .wind-speed-20_30 {
+            background-color: $tb-4;
+          }
+
+        }
+      }
+    }
+
+    &-instrcutions {
+      padding: 30px;
+
+      h5 {
+        text-transform: uppercase;
+        color: $main-color-dark;
+        text-align: center;
+        margin-bottom: 25px !important;
+      }
+
+      &-content {
+        padding: 12px;
+        border: 2px dashed #fff;
+        color: #fff;
+        background-color: $main-bg-color-dark;
+        max-height: 400px;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  .route-islands-products {
+    padding: 20px;
+    border-bottom: 2px solid #000;
+
+    h5 {
+      margin: auto;
+      margin-bottom: 15px;
+      display: block !important;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    &-content {
+      padding: 30px;
+    }
+
+  }
+
+}
+
+/*
+.route-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: $primary-bg-color;
+
+  .island {
+    display: flex;
+    align-items: center;
+
+    .island-icon {
+      width: auto;
+      height: 3rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .direction {
+    display: flex;
+    align-items: center;
+
+    .direction-text {
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+      color: #666;
+    }
+
+    .arrow-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .loop {
+    display: flex;
+    align-items: center;
+
+    .loop-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .loop-text {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}*/

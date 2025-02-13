@@ -1,0 +1,25 @@
+.green-routes {
+  font-family: $font-family-routes;
+  max-width: 100%;
+  background: $main-bg-color;
+  padding-bottom: 50px;
+
+  .routes-title{
+    padding: 50px;
+    margin-bottom: 40px;
+
+    h1 {
+      font-weight: bold;
+      color: $title-color;
+      font-size: 55px;
+    }
+  
+    h2 {
+      font-size: 32px;
+      color: $title-color;
+      font-weight: 300;
+    }
+    
+  }
+  
+}
