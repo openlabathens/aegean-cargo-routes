@@ -33,7 +33,7 @@
 }
 
 .wind-slider {
-  background-image: url("../assets/compass.png");
+  background-image: url("../assets/compass.svg");
   background-size: cover;
 }
 .wind-slider .rs-handle {
@@ -69,13 +69,13 @@
 .routes-menu h3 {
   font-weight: 500;
   font-size: 20px;
-  color: rgb(148, 131, 123);
+  color: rgb(91, 76, 68);
   align-self: flex-start;
   margin-left: 40px;
   margin-bottom: 70px;
 }
 .routes-menu h5 {
-  color: rgb(148, 131, 123);
+  color: rgb(91, 76, 68);
   font-size: 17px;
   text-align: center;
   margin-bottom: 55px;
@@ -132,6 +132,7 @@
   font-weight: bold;
   font-size: 22px;
   line-height: 60px;
+  font-family: "Geologica", sans-serif;
 }
 .routes-menu .island-list .island-icon {
   width: 60px;
@@ -144,7 +145,7 @@
   font-family: "Geologica", sans-serif;
   padding: 18px 35px 18px 70px;
   font-size: 22px;
-  background-color: rgb(148, 131, 123);
+  background-color: rgb(91, 76, 68);
   color: #fff;
   border: none;
   border-radius: 100px;
@@ -159,7 +160,7 @@
   opacity: 0.8;
 }
 .routes-menu .calculate-button.disabled:hover {
-  background-color: rgb(148, 131, 123);
+  background-color: rgb(91, 76, 68);
 }
 .routes-menu .calculate-button:hover {
   background-color: rgb(118, 104, 98);
@@ -259,7 +260,7 @@
   left: -50px;
 }
 .routes-info .route-data-winds h5 {
-  color: rgb(148, 131, 123);
+  color: rgb(91, 76, 68);
   font-size: 17px;
   text-align: center;
   margin-bottom: 55px;

@@ -12,13 +12,6 @@ function aegean_sail_routes_template()
 
 	<div class="container-fluid green-routes">
 
-		<div class="row routes-title">
-			<div class="col-md-12">
-				<h1><?php _e('green routes', 'aegean-sail'); ?></h1>
-				<h2><?php _e('learning about sustainable routes in the Aegean', 'aegean-sail'); ?></h2>
-			</div>
-		</div>
-
 		<div class="row routes-info">
 			<div class="col-md-12" id="routes-info-placement" data-numbering="1">
 			</div>

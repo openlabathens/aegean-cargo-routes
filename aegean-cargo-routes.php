@@ -23,11 +23,15 @@ require_once('inc/routes-ajax.php');
 
 //Include Style
 function aegean_sail_enqueue_style() {
-	wp_enqueue_style( 'aegean-sail-routes', plugins_url('/css/aegean-sail.css', __FILE__) );
-	wp_enqueue_style( 'aegean-sail-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' );
-	wp_enqueue_style( 'aegean-sail-roundslider', 'https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css' );
-	wp_enqueue_style( 'aegean-sail-font','https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet');
-
+	if(is_single()||is_page()){
+		$post = get_post(get_the_ID());
+		if(has_shortcode( $post->post_content,'aegean_sail_routes')){
+			wp_enqueue_style( 'aegean-sail-routes', plugins_url('/css/aegean-sail.css', __FILE__) );
+			wp_enqueue_style( 'aegean-sail-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' );
+			wp_enqueue_style( 'aegean-sail-roundslider', 'https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css' );
+			wp_enqueue_style( 'aegean-sail-font','https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet');
+		}
+	}
 }
 add_action( 'wp_enqueue_scripts', 'aegean_sail_enqueue_style' );
 

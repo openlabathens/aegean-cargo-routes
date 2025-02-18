@@ -15,7 +15,7 @@
 }
 
 .wind-slider {
-  background-image: url('../assets/compass.png');
+  background-image: url('../assets/compass.svg');
   background-size: cover;
 
   .rs-handle {
@@ -129,6 +129,7 @@
         font-weight: bold;
         font-size: 22px;
         line-height: 60px;
+        font-family: $font-family-routes;
       }
 
       &-icon{
